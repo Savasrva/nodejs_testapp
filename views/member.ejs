@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MemberList</title>
+    <style type="text/css">
+        table{border-collapse: collapse;}
+        table,th,td{border: 1px solid #333;}
+        th, td{width:100px; height:30px; text-align: center;}
+        th:nth-child(3), td:nth-child(3), th:nth-child(5), td:nth-child(5){width: 200px;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>user id</th>
+                <th>user name</th>
+                <th>comment</th>
+                <th>birthday</th>
+                <th>registered date</th>
+            </tr>
+        </thead>
+        <tbody id="tBody">
+            <% users.forEach(function(user) { %>
+            <tr>
+                <td><%= user.userId %></td>
+                <td><%= user.userName %></td>
+                <td><%= user.comment %></td>
+                <td><%= user.birthday %></td>
+                <td><%= user.regDate %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
